@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import './aboutUs.css';
 
 const AboutUs = () => {
   return (
@@ -8,7 +9,7 @@ const AboutUs = () => {
       <p>Location: Wu'han</p>
       <br />
       <p>For more information, please view our&nbsp;
-        <Link to="/">website.</Link>
+        <Link className="website" to="/">website.</Link>
       </p>
     </section>
   );

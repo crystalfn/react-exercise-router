@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { NavLink } from "react-router-dom";
+import './header.css';
 
 class Header extends Component {
   state = {
@@ -9,11 +10,11 @@ class Header extends Component {
   }
   render() {
     return (
-      <nav>
+      <nav className="header">
         <ul>
-          <li><NavLink to={this.state.homeUrl}>Home</NavLink></li>
-          <li><NavLink to={this.state.myProfileUrl}>My Profile</NavLink></li>
-          <li><NavLink to={this.state.aboutUsUrl}>About Us</NavLink></li>
+          <li><NavLink className="link" to={this.state.homeUrl}>Home</NavLink></li>
+          <li><NavLink className="link" to={this.state.myProfileUrl}>My Profile</NavLink></li>
+          <li><NavLink className="link" to={this.state.aboutUsUrl}>About Us</NavLink></li>
         </ul>
       </nav>
     );
