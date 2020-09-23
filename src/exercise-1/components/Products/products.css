@@ -1,0 +1,25 @@
+.products {
+  padding: 30px;
+}
+
+h3 {
+  margin: 0;
+}
+
+.products ul {
+  margin: 0;
+  padding: 0;
+}
+
+.products ul li {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 30px;
+  list-style-type: none;
+}
+
+.products .link {
+  color: red;
+  text-decoration: none;
+}

@@ -5,6 +5,8 @@ import Header from "./Header/Header"
 import Home from "./Home/Home";
 import MyProfile from "./MyProfile/MyProfile";
 import AboutUs from "./AboutUs/AboutUs";
+import Products from "./Products/Prosucts";
+import Product from "./Products/Product/product";
 
 class App extends Component {
   render() {
@@ -14,6 +16,8 @@ class App extends Component {
         <Switch>
           <Route exact path="/my-profile" component={MyProfile} />
           <Route exact path="/about-us" component={AboutUs} />
+          <Route exact path="/products" component={Products} />
+          <Route exact path="/product/:id" component={Product} />
           <Route exact path="/" component={Home} />
         </Switch>
       </Router>

@@ -5,6 +5,7 @@ import "./header.css";
 class Header extends Component {
   state = {
     homeUrl: "/",
+    productsUrl: "/products",
     myProfileUrl: "/my-profile",
     aboutUsUrl: "/about-us",
   };
@@ -25,6 +26,19 @@ class Header extends Component {
               Home
             </NavLink>
           </li>
+
+          <li>
+            <NavLink
+              activeStyle={{
+                textDecoration: "underline",
+              }}
+              className="link"
+              to={this.state.productsUrl}
+            >
+              Products
+            </NavLink>
+          </li>
+
           <li>
             <NavLink
               activeStyle={{
@@ -37,6 +51,7 @@ class Header extends Component {
               My Profile
             </NavLink>
           </li>
+
           <li>
             <NavLink
               activeStyle={{
