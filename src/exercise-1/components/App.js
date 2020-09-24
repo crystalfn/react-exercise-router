@@ -1,7 +1,12 @@
 import React, { Component } from "react";
 import "../styles/App.css";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Header from "./Header/Header"
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  Redirect,
+} from "react-router-dom";
+import Header from "./Header/Header";
 import Home from "./Home/Home";
 import MyProfile from "./MyProfile/MyProfile";
 import AboutUs from "./AboutUs/AboutUs";
@@ -17,9 +22,10 @@ class App extends Component {
           <Route exact path="/my-profile" component={MyProfile} />
           <Route exact path="/about-us" component={AboutUs} />
           <Route exact path="/products" component={Products} />
-          <Route exact path="/goods" component={Products} />
           <Route exact path="/product/:id" component={Product} />
-          <Route path="/" component={Home} />
+          <Redirect from="/goods" to="/products"></Redirect>
+          <Route exact path="/" component={Home} />
+          <Redirect form="/:any(.*)" to="/"></Redirect>
         </Switch>
       </Router>
     );
